@@ -40,7 +40,7 @@ You also needed to take a custom configuration for schedulers and policies with 
 ## Usage
 
 
-The script will require the path to the #Juniper SRX configuration file in txt format.
+The script will require the path to the **Juniper SRX** configuration file in **txt** format.
 The script will start the conversion process and will generate the output files in the same directory as the script.
 
 **After the conversion process is finished, you need to manually make changes to juniper's default ports,**
