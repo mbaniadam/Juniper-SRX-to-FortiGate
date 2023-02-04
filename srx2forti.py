@@ -38,7 +38,7 @@ def define_addrgrp(line):
     converted_grp.write(f"append member {address_name}\n")
     converted_grp.write("next\n")
 
-
+# Need to define interface for vlan 
 def define_vlans(line):
     vlan_id = line.split()[6]
     vlan_name = line.split()[10]
@@ -48,7 +48,7 @@ def define_vlans(line):
     converted_vlans.write(f"edit {vlan_name_new}\n")
     converted_vlans.write("set vdom 'BMC'\n")
     converted_vlans.write(f"set ip {vlan_ip}\n")
-    converted_vlans.write("""set allowaccess ping\nset status down\nset role dmz\nset interface 'PO17-7010A'\n""")
+    converted_vlans.write("""set allowaccess ping\nset status down\nset role dmz\nset interface 'PO17'\n""")
     converted_vlans.write(f"set vlanid {vlan_id}\n")
     converted_vlans.write("next\n")
 
@@ -63,19 +63,16 @@ with open("SRX_to_Forti\\backup_j.txt") as srx_backup,\
         open("SRX_to_Forti\converted_policies.txt", "w") as converted_policies,\
         open("SRX_to_Forti\converted_schedules.txt", "w") as converted_schedules:
     save_desc = ""
-    save_policy_name = ""
     policy = {}
     for line in srx_backup.readlines():
         if "protocol tcp" in line:
             port_name = define_ports(line)
-            tcp_port_list.append(port_name)
             if port_name:
                 converted_ports.write(f"edit Port-{port_name}\n")
                 converted_ports.write(f"set tcp-portrange {port_name}\n")
                 converted_ports.write("next\n")
         elif "protocol udp" in line:
             port_name = define_ports(line)
-            udp_port_list.append(port_name)
             if port_name:
                 converted_ports.write(f"edit Port-{port_name}\n")
                 converted_ports.write(f"set udp-portrange {port_name}\n")
