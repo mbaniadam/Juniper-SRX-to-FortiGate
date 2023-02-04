@@ -1,12 +1,12 @@
-### Juniper SRX to FortiGate Configuration Converter
+# Juniper SRX to FortiGate Configuration Converter
 
 This is a Python script that converts Juniper SRX firewall configuration to FortiGate firewall configuration. The script supports conversion of the following configurations:
 
-# Addresses
-# Address groups
-# Services
-# Schedulers
-# Policies
+### Addresses
+### Address groups
+### Services
+### Schedulers
+### Policies
 
 ## Getting Started
 
@@ -15,11 +15,11 @@ These instructions will get you a copy of the project up and running on your loc
 ## Prerequisites
 
 you need to take a full backup of the configuration in the "display set" mode for addresses , address groups and services with the file name: backup_j.txt
-# Command : show configuration | display set
+### Command : show configuration | display set
 
 You also needed to take a custom configuration for schedulers and policies with the file names : schedules.json , policies_j.json
 
-# Command : show configuration logical-systems <LOGICAL_SYSTEM_NAME> security policies | display json
+### Command : show configuration logical-systems <LOGICAL_SYSTEM_NAME> security policies | display json
 
 
 ## Usage
