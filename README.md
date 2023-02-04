@@ -6,7 +6,7 @@ This is a Python script that converts Juniper SRX firewall configuration to Fort
 
 **Policies**
 
-**chedulers (onetime Schedulers)** 
+**Schedulers (onetime Schedulers)** 
 
 **Addresses**
 
