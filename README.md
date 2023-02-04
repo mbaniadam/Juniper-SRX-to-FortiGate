@@ -1,12 +1,12 @@
 # Juniper SRX (Junos OS) to FortiGate Configuration Converter
 
 This is a Python script that converts Juniper SRX firewall configuration to FortiGate firewall configuration. The script supports conversion of the following configurations:
-
+##### Policies
+##### Schedulers
 ##### Addresses
 ##### Address groups
 ##### Services
-##### Schedulers
-##### Policies
+
 
 ## Getting Started
 
