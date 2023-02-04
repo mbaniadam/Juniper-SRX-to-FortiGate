@@ -1,39 +1,33 @@
-Juniper SRX to FortiGate Configuration Converter
+###Juniper SRX to FortiGate Configuration Converter
 
 This is a Python script that converts Juniper SRX firewall configuration to FortiGate firewall configuration. The script supports conversion of the following configurations:
 
-Addresses
-Address groups
-Services
-Schedulers
-Policies
-Getting Started
+#Addresses
+#Address groups
+#Services
+#Schedulers
+#Policies
+
+##Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
-You need to have Python 3 installed on your system. You can download the latest version of Python from the official website here.
+##Prerequisites
 
-Installation
-Clone the repository to your local machine using the following command:
-bash
-Copy code
-git clone https://github.com/YOUR_GITHUB_USERNAME/juniper-srx-to-fortigate-converter.git
-Navigate to the cloned repository:
-bash
-Copy code
-cd juniper-srx-to-fortigate-converter
-Run the script:
-Copy code
-python3 convert.py
-Usage
+you need to take a full backup of the configuration in the "display set" mode for addresses , address groups and services with the file name: #backup_j.txt
+#Command : show configuration | display set
 
-The script will prompt you to enter the path to the Juniper SRX configuration file. After entering the path, the script will start the conversion process and will generate the output file in the same directory as the script with the name output.conf.
+You also needed to take a custom configuration for schedulers and policies with the file names : #schedules.json , policies_j.json
 
-Contributing
+#Command : show configuration logical-systems <LOGICAL_SYSTEM_NAME> security policies | display json
+
+
+##Usage
+
+The script will require the path to the #Juniper SRX configuration file in txt format.
+The script will start the conversion process and will generate the output files in the same directory as the script.
+
+##Contributing
 
 Feel free to submit pull requests and bug reports. For major changes, please open an issue first to discuss what you would like to change.
 
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
