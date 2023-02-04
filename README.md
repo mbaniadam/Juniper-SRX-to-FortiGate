@@ -8,7 +8,7 @@ This is a Python script that converts Juniper SRX firewall configuration to Fort
 ##### Addresses
 ##### Address groups
 ##### Services (custom ports)
-
+##### VLANs (It currently works for one specific interface)
 
 
 ## Getting Started
