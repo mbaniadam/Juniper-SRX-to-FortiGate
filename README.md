@@ -4,7 +4,7 @@
 
 This is a Python script that converts Juniper SRX firewall configuration to FortiGate firewall configuration. The script supports conversion of the following configurations:
 ##### Policies 
-##### Schedulers (onetimes Schedulers)
+##### Schedulers (onetime Schedulers)
 ##### Addresses
 ##### Address groups
 ##### Services (custom ports)
