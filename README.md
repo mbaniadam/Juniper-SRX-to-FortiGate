@@ -40,7 +40,7 @@ You also needed to take a custom configuration for schedulers and policies with 
 ## Usage
 
 
-The script will require the path to the **Juniper SRX** configuration file in **txt** and **JSON** format.
+The script will require the path to the **Juniper SRX** configuration files in **txt** and **JSON** format.
 
 backup_j.txt
 
