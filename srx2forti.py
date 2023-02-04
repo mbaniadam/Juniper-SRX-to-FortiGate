@@ -141,10 +141,9 @@ with open("SRX_to_Forti\\backup_j.txt") as srx_backup,\
             else:
                 dst_addr = ' '.join(dst_addr_lst)
             port_lst = line["policy"][count]["match"]["application"]
-            # Lambda Worked success but we dont want junos-icmp-pin >>> icmp-ping ... we want this: PING
+            #Lambda worked success but we dont want junos-icmp-pin >>> icmp-ping ... we want this: PING
             #port_lst = list(map(lambda st : str.replace(st, 'junos-', ''),port_lst))
             #Convert a list to a space-separated string in Python with join method
-
             if port_lst[0] == "any":
                 port = "ALL"
             else:
