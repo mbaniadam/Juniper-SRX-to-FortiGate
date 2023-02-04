@@ -52,7 +52,7 @@ The script will start the conversion process and will generate the output files 
 
 **After the conversion process is finished, you need to manually make changes to juniper's default ports,**
 
-**for example in converted_policies.txt find junos-ping and edit it with PING.**
+for example in converted_policies.txt find junos-ping and edit it with PING.
 
 
 ## Contributing
