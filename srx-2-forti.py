@@ -91,8 +91,6 @@ with open("SRX_to_Forti\\backup_j.txt") as srx_backup,\
 
 
 
-
-
     js_schedules_j = json.load(schedules_j)
     for item in js_schedules_j["configuration"]["logical-systems"][0]["schedulers"]["scheduler"]:
         sch_name = item["name"]
