@@ -61,5 +61,4 @@ These are the items I am working on:
 - Recurring schedulers
 - Juniper SRX default ports
 
-Feel free to submit pull requests and bug reports.
-
+Please let me know if you have any comment or suggestion.
