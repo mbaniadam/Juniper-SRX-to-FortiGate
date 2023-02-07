@@ -6,7 +6,7 @@ import datetime
 
 def define_ports(line):
     port = ""
-    # set logical-systems BMC applications application Port-23456-23457 protocol tcp
+    # set logical-systems <LOGICAL_SYSTEM_NAME> applications application Port-23456-23457 protocol tcp
     port_name = line.split()[5]
     if "-" in port_name:
         port_low = port_name.split("-")[1]
@@ -90,9 +90,6 @@ with open("SRX_to_Forti\\backup_j.txt") as srx_backup,\
             define_vlans(line)
 
 
-
-
-
     js_schedules_j = json.load(schedules_j)
     for item in js_schedules_j["configuration"]["logical-systems"][0]["schedulers"]["scheduler"]:
         sch_name = item["name"]
@@ -120,7 +117,6 @@ with open("SRX_to_Forti\\backup_j.txt") as srx_backup,\
         converted_schedules.write("next\n")
 
 
-
     js_policies_j = json.load(policies_j)
     policy_id = 2
     for line in js_policies_j["configuration"]["logical-systems"][0]["security"]["policies"]["policy"]:
@@ -141,7 +137,7 @@ with open("SRX_to_Forti\\backup_j.txt") as srx_backup,\
             else:
                 dst_addr = ' '.join(dst_addr_lst)
             port_lst = line["policy"][count]["match"]["application"]
-            #Lambda worked success but we dont want junos-icmp-pin >>> icmp-ping ... we want this: PING
+            #Lambda worked fine but we dont want junos-icmp-pin >>> icmp-ping ... we want this: PING
             #port_lst = list(map(lambda st : str.replace(st, 'junos-', ''),port_lst))
             #Convert a list to a space-separated string in Python with join method
             if port_lst[0] == "any":
