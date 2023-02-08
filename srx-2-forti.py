@@ -167,7 +167,7 @@ with open("SRX_to_Forti\\backup_j.txt") as srx_backup,\
             #list(filter(lambda item: converted_policies.write(f"set service {item}\n"), port))
             #converted_policies.write(f"set service {port}\n")
             if action == "accept":
-                converted_policies.write(f"set utm-status enable\nset ssl-ssh-profile 'certificate-inspection'\nset ips-sensor 'BMC_High'\nset logtraffic all\nnext\n")
+                converted_policies.write(f"set utm-status enable\nset ssl-ssh-profile 'certificate-inspection'\nset ips-sensor 'BM'\nset logtraffic all\nnext\n")
             else:
                 converted_policies.write(f"set logtraffic all\nnext\n")
             count+=1
